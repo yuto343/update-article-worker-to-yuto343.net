@@ -125,6 +125,7 @@ link: ${article.url}
 			if (err.message.includes('No commits between main and')) {
 				console.log("[INFO] New article doesn't exist, delete branch.");
 
+				// 更新なかったらブランチ削除
 				await octokit.git
 					.deleteRef({
 						owner: REPO_OWNER,
