@@ -16,7 +16,7 @@ export interface Env {
 }
 
 export default {
-	async fetch(request, env): Promise<Response> {
+	async scheduled(request, env) {
 		// 定数
 		const URL = 'https://www.codegrid.net/authors/uchoco898/';
 		const BASE_BRANCH = 'main';
@@ -143,6 +143,5 @@ link: ${article.url}
 				console.error(err);
 			}
 		}
-		return new Response('done');
 	},
 } satisfies ExportedHandler<Env>;
