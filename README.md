@@ -14,6 +14,10 @@ curl "http://localhost:8787/__scheduled"
 
 で実行できます。
 
+### デプロイ
+
+デプロイ時には、`npm run deploy`または`wrangler deploy`を実行してください。
+
 ## 備考
 
 環境変数で`GITHUB_PAT`が必要です。これは`wrangler secret put`コマンドで設定してあり、ダッシュボードから存在は確認できます。
